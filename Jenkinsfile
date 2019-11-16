@@ -31,6 +31,7 @@ pipeline {
         stage('Test') {
             steps {
                 bat label: '', script: 'mvn test'
+                emailext body: 'test', subject: 'test', to: 'mehdi.drira@esprit.tn'
             }
         }
         stage("Deploy") {
