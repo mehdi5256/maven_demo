@@ -5,7 +5,7 @@ pipeline {
         
         stage('build') {
             steps {
-               bat label: '', script: 'mvn install '
+               bat label: '', script: 'mvn install deploy '
             }
         }
         
